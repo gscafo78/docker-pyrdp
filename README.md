@@ -31,8 +31,6 @@ action](https://www.youtube.com/watch?v=eB7RC9FmL6Q). This tool is being develop
 research use cases in mind.
 
 
-![PyRDP Player Replaying an RDP session](docs/screens/replay.png)
-
 
 ## Table of Contents
 - [PyRDP](#pyrdp)
