@@ -1,0 +1,21 @@
+version: "3"
+networks:
+  pyrdp_local:
+
+services:
+  pyrdp:
+    image: m-pot/pyrdp
+    build: .
+    restart: always
+    networks:
+     - pyrdp_local
+    container_name: pyRDP
+    read_only: true
+    ports:
+     - "3389:3389"
+    user: "2000:2000"
+    volumes:
+      # The path before the ':' is the destination of the log on the host side.
+     - /data/pyrdp:/home/pyrdp/pyrdp_output
+    # Use the IP_ADDRESS environment variable here
+    command: ["pyrdp-mitm.py", "${IP_ADDRESS}"]
