@@ -4,7 +4,7 @@ networks:
 
 services:
   pyrdp:
-    image: m-pot/pyrdp
+    image: 4ss078/pyrdp
     build: .
     restart: always
     networks:
